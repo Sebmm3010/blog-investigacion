@@ -1,5 +1,4 @@
-/* WARNING: This CSS is optimized for the tutorial, minimizing the classes you’ll need in the comnponents. In other words, it’s not really great CSS so that the tutorial can hopefully be great—but you’ll need to follow the markup exactly for things to work properly. It would need significant re-write to use in your own custom site. */
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@300;500;700;800&family=Roboto:wght@300;400;500;700&display=swap');
 /* CSS RESET */
 *,
 *::after,
@@ -35,16 +34,18 @@ h6 {
 :root {
     /* colors */
     --_hue: 235;
+    --_red: 355 79% 53%;
+    --_mainBlue: 208 100% 14%;
 
     /* Light Mode */
     --bkg--light: var(--_hue) 25% 97%;
     --txt--light: var(--_hue) 40% 5%;
-    --accent--light: var(--_hue) 55% 50%;
+    --accent--light: var(--_mainBlue);
     --muted--light: var(--_hue) 30% 99%;
     /* Dark Mode */
     --bkg--dark: var(--_hue) 15% 10%;
     --txt--dark: var(--_hue) 20% 85%;
-    --accent--dark: var(--_hue) 50% 50%;
+    --accent--dark: var(--_mainBlue);
     --muted--dark: var(--_hue) 20% 2%;
 
     --bkg: var(--bkg--light);
@@ -317,11 +318,6 @@ button {
     }
 }
 
-
-::selection {
-    background: hsl(var(--accent) / .85);
-    color: hsl(var(--bkg));
-}
 
 .container {
     width: 100%;

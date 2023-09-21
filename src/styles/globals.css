@@ -342,6 +342,8 @@ button {
     }
 }
 
+@custom-media --movile (max-width: 480);
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -353,8 +355,11 @@ button {
 }
 
 .logomark {
-    
+    display: grid;
+    place-items: center;
+    padding: var(--space-2xs);
 }
+
 
 [aria-label="Blog pages"] {
     display: flex;

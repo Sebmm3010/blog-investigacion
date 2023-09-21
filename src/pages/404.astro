@@ -1,0 +1,23 @@
+---
+import Link from "../components/Link.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Page not found" desc="">
+  <div class="container">
+    <div>
+      <h1 class="h1">Error 404: La pagina que busca no existe</h1>
+      <p>Regrese a la página principal</p>
+    </div>
+    <Link href="/" style="secondary" text="Volver" />
+  </div>
+</MainLayout>
+
+<style>
+  .container {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: clamp(0.88rem, calc(0.7rem + 0.87vw), 1.38rem);
+  }
+</style>

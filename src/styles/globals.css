@@ -299,8 +299,10 @@ button {
     }
 
     &.secondary {
-        --type: hsl(var(--accent));
-        color: hsl(var(--txt));
+        --type: transparent;
+        border: hsl(var(--_orange)) 2px solid;
+        color: #fff !important;
+
     }
 
     &.filled {
@@ -435,7 +437,7 @@ button {
         /* box-shadow: var(--shadow-lg); */
         /* object-fit: cover; */
         object-position: center;
-        
+
         @media (--md) {
             justify-self: end;
         }

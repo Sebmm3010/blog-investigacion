@@ -201,8 +201,8 @@ body {
 }
 
 .h1 {
-    font-size: var(--fs-2xl);
-    max-width: var(--content-xs);
+    font-size: var(--fs-lg);
+    /* max-width: var(--content-xs); */
 }
 
 h1 span {
@@ -429,13 +429,13 @@ button {
     }
 
     & img {
-        border-radius: var(--radius-full);
-        height: 400px;
-        width: min(300px, 100%);
-        box-shadow: var(--shadow-lg);
-        object-fit: cover;
+        /* border-radius: var(--radius-full); */
+        height: 300px;
+        /* width: min(300px, 100%); */
+        /* box-shadow: var(--shadow-lg); */
+        /* object-fit: cover; */
         object-position: center;
-
+        
         @media (--md) {
             justify-self: end;
         }

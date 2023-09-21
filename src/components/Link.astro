@@ -6,6 +6,8 @@ interface Props {
   isFilled?: boolean;
   borderVisible?: boolean;
   classes?: string;
+  target: string;
+  rel: string;
 }
 
 const {
@@ -15,6 +17,8 @@ const {
   isFilled = true,
   borderVisible = false,
   classes,
+  target = "",
+  rel = "",
   ...rest
 } = Astro.props;
 ---
@@ -27,7 +31,10 @@ const {
     style,
     { filled: isFilled, bordered: borderVisible },
   ]}
+  target={target},
+  rel={rel}
   {...rest}
 >
   <span>{text}</span>
 </a>
+<!-- <a href="http://" target="_blank" rel="noopener noreferrer"></a> -->

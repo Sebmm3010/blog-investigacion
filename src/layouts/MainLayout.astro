@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/Footer.astro";
 import { Navbar } from "../components";
 import "../styles/globals.css";
@@ -25,7 +25,9 @@ const path = Astro.url.pathname;
   </head>
   <body>
     <Navbar actualPath={path} client:visible />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>

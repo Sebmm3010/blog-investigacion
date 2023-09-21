@@ -1,7 +1,29 @@
 ---
+import { Image } from "astro:assets";
 import MainLayout from "../../layouts/MainLayout.astro";
+import logo from "../../../public/logo.png";
+import Link from "../../components/Link.astro";
 ---
 
 <MainLayout title="Sobre nosotros" desc="Sobre nosotro">
-    <h1>Sobre nosotro</h1>
+  <section class="container about" aria-label="About Me">
+    <Image src={logo} alt="descriptive text" />
+    <div class="content">
+      <h1 class="h1">Proyectos de investigacon de ondas categoria juvenil</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo earum sunt
+        rerum perspiciatis eligendi, quidem esse maxime delectus officiis
+        tenetur voluptates enim quod repellendus similique. At nesciunt amet
+        voluptates cupiditate optio nam, animi ex sunt dignissimos blanditiis
+        debitis dolor repellendus.
+      </p>
+      <Link
+        href="https://iesoledadromandenunez.edu.co/"
+        style="primary"
+        text="Pagina oficial"
+        target="_blank"
+        rel="noopener noreferrer"
+      />
+    </div>
+  </section>
 </MainLayout>

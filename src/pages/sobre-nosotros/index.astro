@@ -1,13 +1,11 @@
 ---
-import { Image } from "astro:assets";
 import MainLayout from "../../layouts/MainLayout.astro";
-import logo from "../../../public/logo.png";
 import Link from "../../components/Link.astro";
 ---
 
 <MainLayout title="Sobre nosotros" desc="Sobre nosotro">
   <section class="container about" aria-label="About Me">
-    <Image src={logo} alt="descriptive text" />
+    <img src="/logo.png" alt="descriptive text" />
     <div class="content">
       <h1 class="h1">Proyectos de investigacon de ondas categoria juvenil</h1>
       <p>

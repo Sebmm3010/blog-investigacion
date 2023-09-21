@@ -5,8 +5,8 @@ function useWindowSize() {
     width: undefined | number;
     height: undefined | number;
   }>({
-    width: undefined,
-    height: undefined,
+    width: 480,
+    height: 672,
   });
 
   useEffect(() => {

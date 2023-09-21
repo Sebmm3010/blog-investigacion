@@ -36,6 +36,7 @@ h6 {
     /* colors */
     --_hue: 235;
     --_red: 355 79% 53%;
+    --_orange: 6 100% 61%;
     --_mainBlue: 208 100% 14%;
 
     /* Light Mode */
@@ -335,14 +336,13 @@ button {
     padding-block: var(--space-xs);
     background-color: hsl(var(--muted));
     box-shadow: var(--shadow-sm);
+    /* position: fixed; */
 
     & ul {
         display: flex;
         gap: var(--space-sm);
     }
 }
-
-@custom-media --movile (max-width: 480);
 
 .navbar {
     display: flex;
@@ -360,6 +360,25 @@ button {
     padding: var(--space-2xs);
 }
 
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+        color: hsl(var(--_orange));
+        text-decoration: underline;
+    }
+}
+
+.actual-page-link {
+    color: hsl(var(--_orange));
+    text-decoration: none;
+
+    &:hover {
+        color: hsl(var(--_orange));
+        text-decoration: underline;
+    }
+}
 
 [aria-label="Blog pages"] {
     display: flex;

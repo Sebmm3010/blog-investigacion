@@ -1,0 +1,15 @@
+---
+
+---
+
+<footer>
+  <small>
+    &copy <span id="copyright"></span> Institución Educativa Soledad Román de
+    Nuñez.
+  </small>
+</footer>
+
+<script>
+  const year = new Date().getFullYear().toString();
+  document.querySelector("#copyright")!.textContent = year;
+</script>

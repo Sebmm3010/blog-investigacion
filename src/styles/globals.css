@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@300;500;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+
 /* CSS RESET */
 *,
 *::after,
@@ -41,13 +42,14 @@ h6 {
     --bkg--light: var(--_hue) 25% 97%;
     --txt--light: var(--_hue) 40% 5%;
     --accent--light: var(--_mainBlue);
-    --muted--light: var(--_hue) 30% 99%;
+    /* --muted--light: var(--_hue) 30% 99%; */
+    --muted--light: var(--_mainBlue);
     /* Dark Mode */
     --bkg--dark: var(--_hue) 15% 10%;
     --txt--dark: var(--_hue) 20% 85%;
     --accent--dark: var(--_mainBlue);
-    --muted--dark: var(--_hue) 20% 2%;
-
+    /* --muted--dark: var(--_hue) 20% 2%; */
+    --muted--dark: var(--_mainBlue);
     --bkg: var(--bkg--light);
     --txt: var(--txt--light);
     --accent: var(--accent--light);
@@ -351,9 +353,7 @@ button {
 }
 
 .logomark {
-    display: grid;
-    place-items: center;
-    padding: var(--space-2xs);
+    
 }
 
 [aria-label="Blog pages"] {

@@ -1,4 +1,6 @@
 ---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/globals.css";
 interface Props {
   title: string;
@@ -8,7 +10,7 @@ interface Props {
 const { title, desc } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="pang" href="/favicon.png" />
@@ -18,8 +20,8 @@ const { title, desc } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <main>
-      <slot />
-    </main>
+    <Navbar />
+    <slot />
+    <Footer />
   </body>
 </html>

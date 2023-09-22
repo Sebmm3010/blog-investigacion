@@ -518,7 +518,7 @@ button {
     & .content {
         display: grid;
         gap: var(--space-xs);
-        max-width: var(--content-md);
+        max-width: var(--content-lg);
     }
 }
 
@@ -543,7 +543,7 @@ button {
     padding: 4px 10px;
     background-color: hsl(var(--accent));
     border-radius: var(--radius-sm);
-    color: hsl(var(--muted));
+    color: #eee;
     text-decoration: none;
     letter-spacing: 0.054em;
     text-transform: uppercase;

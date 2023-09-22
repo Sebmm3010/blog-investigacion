@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import { useState, type FC } from "react";
 import { useWindowSize } from "../hooks";
 import { navLinks } from "../constants";
 
@@ -7,14 +7,14 @@ interface Props {
 }
 
 export const Navbar: FC<Props> = ({ actualPath }) => {
-  const { width } = useWindowSize();
+  const [toggle, setToggle] = useState(false);
   return (
     <nav aria-label="Primary">
       <div className="navbar">
         <a href="/" className="logomark" aria-label="Go home">
           <img
             className="logo-title"
-            src={width! >= 480 ? "/logo_title.png" : "/logo.png"}
+            src="/logo_title.png"
             alt="icon"
             width="60"
             height="60"
@@ -40,6 +40,41 @@ export const Navbar: FC<Props> = ({ actualPath }) => {
             Contactanos
           </a>
         </ul>
+        {/* Movile button */}
+        <div className="movile-trigger" onClick={() => setToggle(!toggle)}>
+          <svg
+            viewBox="0 0 32 32"
+            width="30"
+            height="30"
+            stroke="currentColor"
+            fill="currentColor"
+          >
+            <path d="M28 24H4V21.3H28V24ZM28 17.3H4V14.7H28V17.3ZM28 10.7H4V8H28V10.7Z" />
+          </svg>
+        </div>
+        {toggle && (
+          <>
+            <div onClick={() => setToggle(!toggle)} className="menu-close-btn">
+              <svg
+                viewBox="0 0 32 32"
+                width="32"
+                height="32"
+                stroke="currentColor"
+                fill="currentColor"
+              >
+                <path d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z" />
+              </svg>
+            </div>
+
+            <div className="movile-menu">
+              <div className="">
+                <a href="/">Inicio</a>
+                <a href="#">Servicios</a>
+                <a href="/contact">Contactanos</a>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </nav>
   );

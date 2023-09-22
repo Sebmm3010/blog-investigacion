@@ -341,8 +341,13 @@ button {
     /* position: fixed; */
 
     & ul {
-        display: flex;
-        gap: var(--space-sm);
+        display: none;
+
+
+        @media (--sm) {
+            display: flex;
+            gap: var(--space-sm);
+        }
     }
 }
 
@@ -354,6 +359,73 @@ button {
     max-width: 1500px;
     margin-inline: auto;
     padding-inline: var(--space-md);
+}
+
+
+.movile-trigger {
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    background-color: transparent;
+    border-radius: var(--radius-sm);
+
+    @media (--sm) {
+        display: none;
+    }
+}
+
+.movile-menu {
+    position: fixed;
+    display: flex;
+    background-color: #eee;
+    color: #16161d;
+    z-index: 40;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    & a {
+        text-decoration: none;
+    }
+
+    & div {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.125rem;
+        /* 18px */
+        line-height: 1.75rem;
+        /* 28px */
+    }
+
+    @media (--sm) {
+        display: none;
+    }
+}
+
+.menu-close-btn {
+    z-index: 50;
+    color: #16161d;
+
+    @media (--sm) {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .movile-menu {
+        background-color: #16161d;
+        color: #eee;
+    }
+
+    .menu-close-btn {
+        color: #eee;
+    }
 }
 
 .logomark {

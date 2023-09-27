@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import Link from "./Link.astro";
+import { shortText } from "../utils";
+import { IActividad } from "../interfaces";
+interface Props {
+  actividad: IActividad;
+  tagType: string;
+}
+
+const { actividad, tagType } = Astro.props;
+const { numero, titulo, objetivos, contenido, slug, anexos, headerImg } =
+  actividad;
+const Tag = tagType;
+---
+
+<article class="card">
+  <a href={`/actividades/${slug}`} aria-hidden="true">
+    <Image
+      src={headerImg || "/mainHeader.jpg"}
+      alt={titulo}
+      loading="lazy"
+      width={400}
+      height={250}
+      quality={80}
+    />
+  </a>
+  <div class="content">
+    <!-- @ts-ignore -->
+    <Tag class="h3">
+      <a class="title" href={`/actividades/${slug}`}>
+        {titulo}
+      </a>
+    </Tag>
+  </div>
+  <p>{shortText(contenido, 50)}</p>
+  <Link href={`/actividades/${slug}`} text="Leer actividad" style="secondary" />
+</article>

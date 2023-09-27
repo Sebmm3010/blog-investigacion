@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import Link from "./Link.astro";
+import { IPost } from "../interfaces";
+interface Props {
+  post: IPost;
+  tagType: string;
+}
+
+const { post, tagType } = Astro.props;
+const { title, category, autor, imagen, descripcion, slug } = post;
+const Tag = tagType;
+---
+
+<article class="card">
+  <a href={`/blog/${slug}`} aria-hidden="true">
+    <Image
+      src={imagen.src}
+      alt={imagen.alt}
+      loading="lazy"
+      width={400}
+      height={250}
+      quality={80}
+    />
+  </a>
+  <div class="content">
+    <!-- @ts-ignore -->
+    <Tag class="h3">
+      <a href={`/blog/${slug}`}>
+        {title}
+      </a>
+    </Tag>
+  </div>
+  <p>{descripcion}</p>
+  <Link href={`/blog/${slug}`} text="Leer actividad" style="secondary"/>
+</article>

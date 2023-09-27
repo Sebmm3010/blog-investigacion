@@ -569,6 +569,7 @@ button {
     padding: var(--space-md);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
+    color: #eee;
 
     & .badge {
         --accent: var(--txt);
@@ -586,6 +587,12 @@ button {
 
     & a {
         text-decoration: none;
+        color: #eee;
+    }
+
+    & .title{
+        text-decoration: underline;
+        font-size: 1.5rem;
     }
 
     & .content {

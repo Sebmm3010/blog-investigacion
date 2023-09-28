@@ -1,2 +1,1 @@
-export * from './actividad';
-export * from './post';
+export * from "./actividad";

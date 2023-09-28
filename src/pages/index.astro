@@ -1,7 +1,44 @@
 ---
+import ActividadCard from "../components/ActividadCard.astro";
+import Link from "../components/Link.astro";
+import { actividades } from "../data";
 import MainLayout from "../layouts/MainLayout.astro";
+const newActividades = actividades.slice(0, 3);
 ---
 
-<MainLayout title="IE Soledad Román de nuñez - Blog de investigacion" desc="blog de investigacion">
-  <h1>Index</h1>
+<MainLayout
+  title="IE Soledad Román de nuñez - Blog de investigacion"
+  desc="blog de investigacion"
+>
+<section class="container about" aria-label="About Me">
+    <img src="/logo.png" alt="descriptive text" loading="lazy" />
+    <div class="content">
+      <h1 class="h1">Inclusión en la escuela: Prototipos y estrategias para construir conocimiento científico</h1>
+      <p>
+        La Institución Educativa Soledad Román de Núñez busca desarrollar un Proyecto Educativo Institucional – PEI – que permita a los estudiantes INEDSORISTAS adquirir autonomía, autoestima, responsabilidad, respeto por la diferencia y sentido de pertenencia, teniendo como ejes del desarrollo las dimensiones del SER SOCIAL.
+      </p>
+      <Link
+        href="https://iesoledadromandenunez.edu.co/"
+        style="primary"
+        text="Pagina oficial"
+        target="_blank"
+        rel="noopener noreferrer"
+      />
+    </div>
+  </section>
+  <section class="container" aria-label="New Blog Posts">
+    <h2 class="h1">Nuevas actividades</h2>
+    <div class="post-container">
+      {
+        newActividades.map((actividad) => (
+          <ActividadCard {actividad} tagType="h3" />
+        ))
+      }
+    </div>
+  </section>
 </MainLayout>
+<style>
+  img{
+    object-fit: contain;
+  }
+</style>

@@ -23,13 +23,10 @@ const { titulo, contenido, slug, headerImg, objetivos, anexos, numero } =
     <div class="content">
       <h3 class="h3">Objetivos</h3>
       <ul>
-        {objetivos.map(obj=>(
-        <li>{obj}</li>
-      ))}
+        {objetivos.map((obj) => <li>{obj}</li>)}
       </ul>
       <slot />
-      {(<Anexos {anexos} {numero} />)}
+      <Anexos {anexos} {numero} />
     </div>
   </div>
 </MainLayout>
-

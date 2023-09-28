@@ -1,7 +1,6 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import { actividades } from "../../data";
-import PostCard from "../../components/PostCard.astro";
 import ActividadCard from "../../components/ActividadCard.astro";
 ---
 
@@ -12,7 +11,6 @@ import ActividadCard from "../../components/ActividadCard.astro";
   <section class="container" aria-label="New Blog Posts">
     <h1 class="h1">Nuevas actividades</h1>
     <div class="post-container">
-      <!-- {posts.map((post) => <PostCard {post} tagType="h2" />)} -->
       {
         actividades.map((actividad) => (
           <ActividadCard {actividad} tagType="h2" />

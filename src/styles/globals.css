@@ -509,6 +509,7 @@ button {
         /* box-shadow: var(--shadow-lg); */
         /* object-fit: cover; */
         object-position: center;
+        object-fit: contain;
 
         @media (--md) {
             justify-self: end;

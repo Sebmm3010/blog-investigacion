@@ -62,4 +62,13 @@ const { anexos, numero } = Astro.props;
   a:hover {
     color: #eee;
   }
+  @media (max-width: 768px) {
+  .anexos {
+    flex-direction: column;
+    & img {
+      width: 90%;
+      height: 70%;
+    }
+  }
+}
 </style>

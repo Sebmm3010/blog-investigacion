@@ -68,9 +68,18 @@ export const Navbar: FC<Props> = ({ actualPath }) => {
 
             <div className="movile-menu">
               <div className="">
-                <a href="/">Inicio</a>
-                <a href="#">Servicios</a>
-                <a href="/contact">Contactanos</a>
+                {navLinks.map(({ label, path }) => (
+                  <a key={path} href={path}>
+                    {label}
+                  </a>
+                ))}
+                <a
+                  href="https://iesoledadromandenunez.edu.co/contact-iii/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Contactanos
+                </a>
               </div>
             </div>
           </>

@@ -590,7 +590,7 @@ button {
         color: #eee;
     }
 
-    & .title{
+    & .title {
         text-decoration: underline;
         font-size: 1.5rem;
     }
@@ -617,6 +617,14 @@ header {
     }
 }
 
+.actividad-header {
+    @media (--md) {
+        & img {
+            width: 68%;
+        }
+    }
+}
+
 .post-content {
     display: grid;
     justify-content: center;
@@ -631,7 +639,7 @@ header {
         gap: var(--space-sm);
     }
 
-    & .sidebar {
+    /* & .sidebar {
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
@@ -661,12 +669,13 @@ header {
                 }
             }
         }
-    }
+    } */
 
     @media (--md) {
         grid-template-columns: 1fr minmax(auto, 220px);
         gap: var(--space-lg);
         align-items: start;
+        padding-left: 11rem;
     }
 
     @media (--lg) {

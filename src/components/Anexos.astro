@@ -1,0 +1,65 @@
+---
+import { number } from "astro/zod";
+interface Props {
+  numero: number;
+  anexos: {
+    tipo: "img" | "imgs" | "youtube" | "link";
+    content: string | string[];
+    desc?: string;
+  };
+}
+const { anexos, numero } = Astro.props;
+---
+
+<h3 class="h3">Anexos</h3>
+{anexos.desc && <p>{anexos.desc}</p>}
+<div class="anexos">
+  {
+    anexos.tipo === "img" && (
+      <img src={anexos.content as string} alt={`img-${numero}`} />
+    )
+  }
+  {
+    anexos.tipo === "imgs" &&
+      Array.isArray(anexos.content) &&
+      anexos.content.map((img) => <img src={img} alt={`act-${numero}-img`} />)
+  }
+  {
+    anexos.tipo === "link" && (
+      <a
+        href={anexos.content as string}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {anexos.desc || "Link de anexo"}
+      </a>
+    )
+  }
+  {
+    anexos.tipo === "youtube" && (
+      <iframe
+        width="560"
+        height="315"
+        src={anexos.content as string}
+        title={anexos.desc || "Video de youtube"}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      />
+    )
+  }
+</div>
+
+<style>
+  .anexos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img {
+      width: 50%;
+      height: 70%;
+    }
+  }
+  a:hover {
+    color: #eee;
+  }
+</style>

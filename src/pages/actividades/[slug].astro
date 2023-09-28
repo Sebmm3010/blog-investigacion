@@ -1,0 +1,19 @@
+---
+import ActivityLayout from "../../layouts/ActivityLayout.astro";
+import { actividades } from "../../data";
+
+export async function getStaticPaths() {
+  return actividades.map((actividad) => {
+    return {
+      params: { slug: actividad.slug },
+      props: { actividad },
+    };
+  });
+}
+const params = Astro.params;
+const arr = actividades.filter(({ slug }) => slug === params.slug);
+const actividad = arr[0];
+---
+<ActivityLayout actividad={actividad}>
+  {actividad.contenido}
+</ActivityLayout>

@@ -107,7 +107,7 @@ export const actividades: IActividad[] = [
     anexos: {
       tipo: "youtube",
       desc: "Video inclusivo para estudiantes con discapacidad auditiva sistema de nivel de agua.",
-      content: "https://www.youtube.com/watch?v=e5eq2GvQGq8",
+      content: "https://www.youtube.com/embed/e5eq2GvQGq8?si=V_1g5nwrsoT68WcP",
     },
   },
   {
@@ -125,7 +125,7 @@ export const actividades: IActividad[] = [
     anexos: {
       tipo: "youtube",
       desc: "Video inclusivo para estudiantes con discapacidad auditiva sistema de nivel de agua.",
-      content: "https://www.youtube.com/watch?v=ZSh632bjSmQ",
+      content: "https://www.youtube.com/embed/ZSh632bjSmQ?si=LiT2RPvXNAYEO8lF",
     },
   },
 ];

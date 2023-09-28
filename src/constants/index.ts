@@ -4,7 +4,7 @@ export const navLinks = [
     path: "/sobre-nosotros",
   },
   {
-    label: "Más",
-    path: "/blog",
+    label: "Actividades",
+    path: "/actividades",
   },
 ];

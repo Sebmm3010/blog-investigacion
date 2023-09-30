@@ -9,14 +9,14 @@ interface Props {
 }
 
 const { actividad, tagType } = Astro.props;
-const { titulo, contenido, slug, headerImg } =
-  actividad;
+const { titulo, contenido, slug, headerImg } = actividad;
 const Tag = tagType;
 ---
 
 <article class="card">
   <a href={`/actividades/${slug}`} aria-hidden="true">
     <Image
+      transition:name={titulo}
       src={headerImg || "/mainHeader.jpg"}
       alt={titulo}
       loading="lazy"

@@ -17,7 +17,11 @@ const { titulo, contenido, slug, headerImg, objetivos, anexos, numero } =
         {titulo}
       </h1>
     </div>
-    <img src={headerImg || "/mainHeader.jpg"} alt={`${slug}-img`} />
+    <img
+      transition:name={titulo}
+      src={headerImg || "/mainHeader.jpg"}
+      alt={`${slug}-img`}
+    />
   </header>
   <div class="post-content">
     <div class="content">
